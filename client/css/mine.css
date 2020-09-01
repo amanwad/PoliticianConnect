@@ -1,0 +1,20 @@
+.nav.navbar-nav.ml-auto {
+  font-size: 200%;
+}
+
+#mainNav .navbar-nav > li > a, #mainNav .navbar-nav > li > a:focus {
+  font-size: large;
+  margin-left: 50px;
+  font-family: cursive;
+  text-transform: initial;
+}
+
+#mainNav .name-display {
+  font-size: 200%;
+  /*font-family: Roboto,arial,sans-serif;*/
+  font-family: cursive;
+  font-weight: 600;
+  /*font-style: italic;*/
+  color: #ffa33a;
+}
+

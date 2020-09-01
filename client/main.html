@@ -1,18 +1,71 @@
 <head>
-  <title>politicianconnect</title>
-
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - PoliticianConnect</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/mine.css">
 </head>
 
 <body>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <div class="jumbotron">
+  <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav" style="max-width: 100vw;/*background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);*/background: linear-gradient(-80deg, #12c2e9, #c471ed, #f64f59);height: 10%;">
+    <div class="container" style="/*margin-right: 0;*/"><a class="navbar-brand js-scroll-trigger name-display" href="#page-top" style="/*font-size: 200%;*/">Cory Booker</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler float-right" aria-controls="navbarResponsive"
+            aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Home</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#download">Answered</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" href="#features">Ranks</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<header class="masthead" style="background: url('assets/img/bg-pattern.png'), linear-gradient(to left, #7b4397, #dc2430);height: 92.5%;">
+    <div class="container text-center text-sm-center text-md-center text-lg-center text-xl-center d-flex h-100" style="/*margin-left: 15%;*//*margin-right: 15%;*/max-width: 100wh;">
+        <div class="row text-center h-100">
+            <div class="col-auto col-lg-7 col-xl-6 my-auto" style="width: 664px;min-height: 524px;height: auto;text-align: left;">
+                <div class="text-left mx-auto header-content" style="margin-top: 10%;">
+                    <h1 class="text-left mb-5" style="font-size: 90px;"><strong>Politician</strong></h1>
+                    <h3 style="margin-bottom: 78px;padding-right: 105px;"><em>Ask questions to your local politician, and get answers in an&nbsp;convenient&nbsp;way!&nbsp;</em></h3>
+                </div>
+            </div>
+            <div class="col-auto col-lg-7 col-xl-6 my-auto" style="width: 664px;min-height: 524px;height: auto;text-align: left;">
+              <!-- <h1 class="text-center" style="margin-top: 10%;color: rgb(55,3,64);font-weight: 700;font-size: 60px;">Sign Up</h1> -->
+              {{> atForm}}
+                <div class="text-left mx-auto header-content" style="margin-top: 10%;"></div>
+            </div>
+        </div>
+    </div>
+</header>
+<footer style="height: 7.5%;">
+    <div class="container">
+        <p class="text-center">©&nbsp;Brand 2020. All Rights Reserved.</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">FAQ</a></li>
+        </ul>
+    </div>
+</footer>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="assets/js/new-age.js"></script>
+  <!-- <div class="jumbotron">
     <h1>Bootstrap Tutorial</h1>
     <p>Bootstrap is the most popular HTML, CSS...</p>
   </div>
   <h1>Welcome to Meteor!</h1>
   <button type="button" class="btn btn-primary">Primary</button> 
   {{> hello}}
-  {{> info}}
+  {{> info}} -->
 </body>
 
 <template name="hello">
