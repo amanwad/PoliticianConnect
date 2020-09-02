@@ -15,10 +15,19 @@ Meteor.call('alternate',
 
 });
 
-Template.body.events({
-  'click .sign-out'(event) {
-      console.log("Pressed Logout!");
-      AccountsTemplates.logout();
+Template.profileDropdown.events({
+  'click .dropdown-toggle': function (event) {
+    Session.set("showProfileDropdown", !Session.get("showProfileDropdown"));
+  },
+  'click .sign-out': function (event) {
+    console.log("Pressed Logout!");
+    AccountsTemplates.logout();
+  },
+});
+
+Template.profileDropdown.helpers({
+  showProfileMenu: function() {
+    return Session.get("showProfileDropdown");
   }
 })
 
