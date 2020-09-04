@@ -18,7 +18,8 @@
 <body>
 {{>navbar}}
 <header class="masthead">
-  {{>home}}
+  <!-- {{>home}} -->
+  {{>questions}}
 </header>
 {{>footer}}
 <script src="assets/js/jquery.min.js"></script>
@@ -55,6 +56,70 @@
           {{> atForm}}
             <div class="text-left mx-auto header-content" style="margin-top: 10%;"></div>
         </div>
+    </div>
+</div>
+</template>
+
+<template name="questions">
+  <div class="container">
+    <div class="row">
+      
+      <!--Heading: -->
+      <!-- <div class="overlay"></div>
+        <div class="container first">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto">
+                    <div class="site-heading">
+                        <h1>Your Questions:</h1><span class="subheading">A Blog Theme by Start Bootstrap</span></div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="jumbotron jumbotron-fluid first your-questions">
+          <div class="container">
+            <h1 class="display-4">Your Questions</h1>
+            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+          </div>
+        </div>
+
+      <!--End of Heading-->
+
+      <!--Blog: -->
+        <div class="col-md-10 col-lg-8" style="margin-top: 4%;">
+            <div class="post-preview">
+                <a href="#">
+                    <h2 class="post-title">Man must explore, and this is exploration at its greatest</h2>
+                    <h3 class="post-subtitle">Problems look mighty small from 150 miles up</h3>
+                </a>
+                <p class="post-meta">Posted by&nbsp;<a href="#">Start Bootstrap on September 24, 2018</a></p>
+            </div>
+            <hr>
+            <div class="post-preview">
+                <a href="#">
+                    <h2 class="post-title">I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.</h2>
+                </a>
+                <p class="post-meta">Posted by&nbsp;<a href="#">Start Bootstrap on September 18, 2018</a></p>
+            </div>
+            <hr>
+            <div class="post-preview">
+                <a href="#">
+                    <h2 class="post-title"> Science has not yet mastered prophecy</h2>
+                    <h3 class="post-subtitle">We predict too much for the next year and yet far too little for the next ten.</h3>
+                </a>
+                <p class="post-meta">Posted by&nbsp;<a href="#">Start Bootstrap on August 24, 2018</a></p>
+            </div>
+            <hr>
+            <div class="post-preview">
+                <a href="#">
+                    <h2 class="post-title">Failure is not an option</h2>
+                    <h3 class="post-subtitle">Many say exploration is part of our destiny, but it’s actually our duty to future generations.</h3>
+                </a>
+                <p class="post-meta">Posted by&nbsp;<a href="#">Start Bootstrap on July 8, 2018</a></p>
+            </div>
+            <hr>
+            <div class="clearfix"><button class="btn btn-primary float-right" type="button">Older Posts&nbsp;⇒</button></div>
+        </div>
+        <!--End of Blog-->
     </div>
 </div>
 </template>

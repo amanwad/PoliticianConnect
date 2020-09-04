@@ -44,7 +44,8 @@
 header.masthead {
   /*background: url('../../assets/img/bg-pattern.png'), linear-gradient(to left, #7b4397, #dc2430);*/
   background: url('public/images/bg-pattern.png'), linear-gradient(to left, #3e008c, #7a1093);
-  height: 92.5%;
+  min-height: 92.5%;
+  height: auto;
 }
 
 .nav-item.dropdown {
@@ -57,3 +58,6 @@ header.masthead {
   margin-left: 10px;
 }
 
+.first{
+  margin-top: 12%;
+}
