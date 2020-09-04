@@ -6,13 +6,22 @@ import { HTTP } from 'meteor/http';
 
 import './main.html';
 
-Meteor.call('alternate', 
-(err, res) =>
-{
-  console.log('running');
+// Meteor.call('uploadVideo', "amanisannoying", "testing.jpeg", '/Users/amanwadhwa/Downloads/image0.jpeg',
+// (err, res) =>
+// {
+//   console.log('running');
   
-  console.log(res);
+//   console.log(res);
 
+// });
+Session.set("x", "Loading...");
+x = Meteor.call('getStatePolitician', '416 Vanderveer Road Bridgewater NJ 08807', (err, res) => {
+    Session.set("x", res);
+})
+
+Template.body.helpers({
+    test: function() {
+        return Session.get("x");
+    }
 });
-//var x = fetch('https://civicinfo.googleapis.com/civicinfo/v2/representatives?address=416%20Vanderveer%20Road%20Bridgewater%20NJ%2008807&levels=country&roles=legislatorLowerBody&key=AIzaSyDB5e9LPNi72wi_R7wqCw6VFmloaQZ0jmM');
-//console.log(x);
+
