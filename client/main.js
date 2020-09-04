@@ -5,6 +5,7 @@ import { Mongo } from 'meteor/mongo';
 import { HTTP } from 'meteor/http';
 
 import './main.html';
+import './constants.html';
 
 Meteor.call('alternate', 
 (err, res) =>
