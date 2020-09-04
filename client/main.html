@@ -16,47 +16,11 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav" style="max-width: 100vw;/*background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);*/background: linear-gradient(-80deg, #12c2e9, #c471ed, #f64f59);opacity: 0.80;height: 10%;">
-    <div class="container" style="/*margin-right: 0;*/"><a class="navbar-brand d-inline-flex js-scroll-trigger name-display" href="#page-top" style="/*font-size: 200%;*/font-family: Catamaran, sans-serif;font-style: normal;">PoliticianConnect</a><button data-toggle="collapse" data-target="#navbarResponsive"
-            class="navbar-toggler float-right" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
-        <ul class="nav navbar-nav ml-auto" style="width: 853px;">
-            <li class="nav-item" role="presentation"><a class="nav-link active d-inline-flex" href="#" style="font-family: Catamaran, sans-serif;">Home</a></li>
-            <li class="nav-item" role="presentation"><a class="nav-link d-inline-flex js-scroll-trigger" href="#download" style="font-family: Catamaran, sans-serif;">Questions</a></li>
-            <li class="nav-item" role="presentation"><a class="nav-link d-inline-flex js-scroll-trigger" href="#download" style="font-family: Catamaran, sans-serif;">Answered</a></li>
-            <li class="nav-item" role="presentation"><a class="nav-link d-inline-flex js-scroll-trigger" href="#features" style="font-family: Catamaran, sans-serif;">Ranks</a></li>
-            <li class="nav-item dropdown" style="padding-left: 0px;margin-left: 31px;">
-            </li>
-        </ul>
-        {{> profileDropdown}}
-    </div>
-</nav>
-<header class="masthead" style="background: url('assets/img/bg-pattern.png'), linear-gradient(to left, #7b4397, #dc2430);height: 92.5%;">
-    <div class="container text-center text-sm-center text-md-center text-lg-center text-xl-center d-flex h-100" style="/*margin-left: 15%;*//*margin-right: 15%;*/max-width: 100wh;">
-        <div class="row text-center h-100">
-            <div class="col-auto col-lg-7 col-xl-6 my-auto" style="width: 664px;min-height: 524px;height: auto;text-align: left;">
-                <div class="text-left mx-auto header-content" style="margin-top: 10%;">
-                    <h1 class="text-left mb-5" style="font-size: 90px;"><strong>Politician</strong></h1>
-                    <h3 style="margin-bottom: 78px;padding-right: 105px;"><em>Ask questions to your local politician, and get answers in an&nbsp;convenient&nbsp;way!&nbsp;</em></h3>
-                </div>
-            </div>
-            <div class="col-auto col-lg-7 col-xl-6 my-auto" style="width: 664px;min-height: 524px;height: auto;text-align: left;">
-              <!-- <h1 class="text-center" style="margin-top: 10%;color: rgb(55,3,64);font-weight: 700;font-size: 60px;">Sign Up</h1> -->
-              {{> atForm}}
-                <div class="text-left mx-auto header-content" style="margin-top: 10%;"></div>
-            </div>
-        </div>
-    </div>
+{{>navbar}}
+<header class="masthead">
+  {{>home}}
 </header>
-<footer style="height: 7.5%;">
-    <div class="container">
-        <p class="text-center">©&nbsp;Brand 2020. All Rights Reserved.</p>
-        <ul class="list-inline">
-            <li class="list-inline-item"><a href="#">Privacy</a></li>
-            <li class="list-inline-item"><a href="#">Terms</a></li>
-            <li class="list-inline-item"><a href="#">FAQ</a></li>
-        </ul>
-    </div>
-</footer>
+{{>footer}}
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
@@ -72,6 +36,46 @@
   {{> info}} -->
 </body>
 
+<!-- Home page content -->
+<template name="home"> 
+  <div class="container text-center text-sm-center text-md-center text-lg-center text-xl-center d-flex h-100" style="/*margin-left: 15%;*//*margin-right: 15%;*/max-width: 100wh;">
+    <div class="row text-center h-100">
+        <div class="col-auto col-lg-7 col-xl-6 my-auto" style="width: 664px;min-height: 524px;height: auto;text-align: left;">
+            <div class="text-left mx-auto header-content" style="margin-top: 10%;">
+                <h1 class="text-left mb-5" style="font-size: 90px;"><strong>Politician</strong></h1>
+                <h3 style="margin-bottom: 78px;padding-right: 105px;"><em>Ask questions to your local politician, and get answers in an&nbsp;convenient&nbsp;way!&nbsp;</em></h3>
+            </div>
+        </div>
+        <div class="col-auto col-lg-7 col-xl-6 my-auto" style="width: 664px;min-height: 524px;height: auto;text-align: left;">
+          <!-- <h1 class="text-center" style="margin-top: 10%;color: rgb(55,3,64);font-weight: 700;font-size: 60px;">Sign Up</h1> -->
+          {{> atForm}}
+            <div class="text-left mx-auto header-content" style="margin-top: 10%;"></div>
+        </div>
+    </div>
+</div>
+</template>
+
+
+<!--Navbar-->
+<template name="navbar">
+  <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container" style="/*margin-right: 0;*/"><a class="navbar-brand d-inline-flex js-scroll-trigger name-display" href="#page-top">PoliticianConnect</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler float-right" aria-controls="navbarResponsive" aria-expanded="false"
+            aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item" role="presentation"><a class="nav-link active d-inline-flex" href="#" style="font-family: Catamaran, sans-serif;">Home</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link d-inline-flex js-scroll-trigger" href="#questions">Questions</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link d-inline-flex js-scroll-trigger" href="#download">Answered</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link d-inline-flex js-scroll-trigger" href="#features">Ranks</a></li>
+            <!-- <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#" style="color: rgb(255,255,255);font-size: 26px;margin-left: 0px;">Cory Booker</a>
+                <div class="dropdown-menu flex-column" role="menu"><a class="dropdown-item" role="presentation" href="#">Profile</a><a class="dropdown-item" role="presentation" href="#" style="color: rgb(248,67,67);">Sign Out</a></div>
+            </li> -->
+        </ul>
+        <!-- <div class="collapse navbar-collapse" id="navbarResponsive"></div> -->
+        {{> profileDropdown}}
+    </div>
+</nav>
+</template>
+
   <!-- I swear Bootstrap menu's are broken. Had to manually implement it. -->
 <template name = "profileDropdown">
   <div style = "position:relative">
@@ -83,4 +87,18 @@
   </div>
   {{/if}}
 </div>
+</template>
+
+<!-- Footer page -->
+<template name="footer">
+  <footer style="height: 7.5%;">
+    <div class="container">
+        <p class="text-center">©&nbsp;Brand 2020. All Rights Reserved.</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">FAQ</a></li>
+        </ul>
+    </div>
+</footer>
 </template>
