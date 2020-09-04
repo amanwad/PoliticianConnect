@@ -6,6 +6,11 @@ Meteor.startup(() => {
   // code to run on server at startup
 });
 
+Accounts.onCreateUser((options, user) => {
+  return Object.assign(user, options);
+})
+
+
 Meteor.methods({
   loadClient() {
     gapi.client.setApiKey("AIzaSyDB5e9LPNi72wi_R7wqCw6VFmloaQZ0jmM");

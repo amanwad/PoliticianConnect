@@ -41,9 +41,13 @@
   <div class="container text-center text-sm-center text-md-center text-lg-center text-xl-center d-flex h-100" style="/*margin-left: 15%;*//*margin-right: 15%;*/max-width: 100wh;">
     <div class="row text-center h-100">
         <div class="col-auto col-lg-7 col-xl-6 my-auto" style="width: 664px;min-height: 524px;height: auto;text-align: left;">
-            <div class="text-left mx-auto header-content" style="margin-top: 10%;">
-                <h1 class="text-left mb-5" style="font-size: 90px;"><strong>Politician</strong></h1>
-                <h3 style="margin-bottom: 78px;padding-right: 105px;"><em>Ask questions to your local politician, and get answers in an&nbsp;convenient&nbsp;way!&nbsp;</em></h3>
+            <div class="text-left mx-auto header-content" style="margin-top: 15%;">
+              {{#if signingUp}}
+                {{> signUpConfig}}
+              {{else}}
+                <h1 class="text-left mb-5" style="font-size: 70px;"><strong>PoliticianConnect</strong></h1>
+                <h3 style="margin-bottom: 78px;padding-right: 105px;"><em>Improving communication between politicians and their constituents.&nbsp;</em></h3>
+              {{/if}}
             </div>
         </div>
         <div class="col-auto col-lg-7 col-xl-6 my-auto" style="width: 664px;min-height: 524px;height: auto;text-align: left;">
