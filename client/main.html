@@ -1,125 +1,68 @@
 <head>
   <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - PoliticianConnect</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
-    <link rel="stylesheet" href="assets/css/mine.css">
-    <link rel="stylesheet" href="assets/css/dropdown.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Home - PoliticianConnect</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+  <link rel="stylesheet" href="assets/css/mine.css">
+  <link rel="stylesheet" href="assets/css/dropdown.css">
 </head>
 
 <body>
-{{>navbar}}
-<header class="masthead">
-  <!-- {{>home}} -->
-  {{>questions}}
-</header>
-{{>footer}}
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-<script src="assets/js/new-age.js"></script>
-<script src="main.js"></script>
-  <!-- <div class="jumbotron">
-    <h1>Bootstrap Tutorial</h1>
-    <p>Bootstrap is the most popular HTML, CSS...</p>
-  </div>
-  <h1>Welcome to Meteor!</h1>
-  <button type="button" class="btn btn-primary">Primary</button> 
-  {{> hello}}
-  {{> info}} -->
+  {{>navbar}}
+  <header class="masthead">
+    <!-- {{>home}} -->
+    <!-- {{>questionsPolitician}} -->
+    <!-- {{>questionsUser}} -->
+    {{>answered}}
+  </header>
+  {{>footer}}
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <script src="assets/js/new-age.js"></script>
+  <script src="main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
 </body>
 
 <!-- Home page content -->
-<template name="home"> 
-  <div class="container text-center text-sm-center text-md-center text-lg-center text-xl-center d-flex h-100" style="/*margin-left: 15%;*//*margin-right: 15%;*/max-width: 100wh;">
+<template name="home">
+  <div class="container text-center text-sm-center text-md-center text-lg-center text-xl-center d-flex h-100"
+    style="/*margin-left: 15%;*//*margin-right: 15%;*/max-width: 100wh;">
     <div class="row text-center h-100">
-        <div class="col-auto col-lg-7 col-xl-6 my-auto" style="width: 664px;min-height: 524px;height: auto;text-align: left;">
-            <div class="text-left mx-auto header-content" style="margin-top: 15%;">
-              {{#if signingUp}}
-                {{> signUpConfig}}
-              {{else}}
-                <h1 class="text-left mb-5" style="font-size: 70px;"><strong>PoliticianConnect</strong></h1>
-                <h3 style="margin-bottom: 78px;padding-right: 105px;"><em>Improving communication between politicians and their constituents.&nbsp;</em></h3>
-              {{/if}}
-            </div>
+      <div class="col-auto col-lg-7 col-xl-6 my-auto"
+        style="width: 664px;min-height: 524px;height: auto;text-align: left;">
+        <div class="text-left mx-auto header-content" style="margin-top: 15%;">
+          {{#if signingUp}}
+          {{> signUpConfig}}
+          {{else}}
+          <h1 class="text-left mb-5" style="font-size: 70px;"><strong>PoliticianConnect</strong></h1>
+          <h3 style="margin-bottom: 78px;padding-right: 105px;"><em>Improving communication between politicians and
+              their constituents.&nbsp;</em></h3>
+          {{/if}}
         </div>
-        <div class="col-auto col-lg-7 col-xl-6 my-auto" style="width: 664px;min-height: 524px;height: auto;text-align: left;">
-          <!-- <h1 class="text-center" style="margin-top: 10%;color: rgb(55,3,64);font-weight: 700;font-size: 60px;">Sign Up</h1> -->
-          {{> atForm}}
-            <div class="text-left mx-auto header-content" style="margin-top: 10%;"></div>
-        </div>
+      </div>
+      <div class="col-auto col-lg-7 col-xl-6 my-auto"
+        style="width: 664px;min-height: 524px;height: auto;text-align: left;">
+        <!-- <h1 class="text-center" style="margin-top: 10%;color: rgb(55,3,64);font-weight: 700;font-size: 60px;">Sign Up</h1> -->
+        {{> atForm}}
+        <div class="text-left mx-auto header-content" style="margin-top: 10%;"></div>
+      </div>
     </div>
-</div>
-</template>
-
-<template name="questions">
-  <div class="container">
-    <div class="row">
-      
-      <!--Heading: -->
-      <!-- <div class="overlay"></div>
-        <div class="container first">
-            <div class="row">
-                <div class="col-md-10 col-lg-8 mx-auto">
-                    <div class="site-heading">
-                        <h1>Your Questions:</h1><span class="subheading">A Blog Theme by Start Bootstrap</span></div>
-                </div>
-            </div>
-        </div> -->
-
-        <div class="jumbotron jumbotron-fluid first your-questions">
-          <div class="container">
-            <h1 class="display-4">Your Questions</h1>
-            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-          </div>
-        </div>
-
-      <!--End of Heading-->
-
-      <!--Blog: -->
-        <div class="col-md-10 col-lg-8" style="margin-top: 4%;">
-            <div class="post-preview">
-                <a href="#">
-                    <h2 class="post-title">Man must explore, and this is exploration at its greatest</h2>
-                    <h3 class="post-subtitle">Problems look mighty small from 150 miles up</h3>
-                </a>
-                <p class="post-meta">Posted by&nbsp;<a href="#">Start Bootstrap on September 24, 2018</a></p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="#">
-                    <h2 class="post-title">I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.</h2>
-                </a>
-                <p class="post-meta">Posted by&nbsp;<a href="#">Start Bootstrap on September 18, 2018</a></p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="#">
-                    <h2 class="post-title"> Science has not yet mastered prophecy</h2>
-                    <h3 class="post-subtitle">We predict too much for the next year and yet far too little for the next ten.</h3>
-                </a>
-                <p class="post-meta">Posted by&nbsp;<a href="#">Start Bootstrap on August 24, 2018</a></p>
-            </div>
-            <hr>
-            <div class="post-preview">
-                <a href="#">
-                    <h2 class="post-title">Failure is not an option</h2>
-                    <h3 class="post-subtitle">Many say exploration is part of our destiny, but it’s actually our duty to future generations.</h3>
-                </a>
-                <p class="post-meta">Posted by&nbsp;<a href="#">Start Bootstrap on July 8, 2018</a></p>
-            </div>
-            <hr>
-            <div class="clearfix"><button class="btn btn-primary float-right" type="button">Older Posts&nbsp;⇒</button></div>
-        </div>
-        <!--End of Blog-->
-    </div>
-</div>
+  </div>
 </template>

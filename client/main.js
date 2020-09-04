@@ -6,6 +6,7 @@ import { HTTP } from 'meteor/http';
 
 import './main.html';
 import './constants.html';
+import './questions.html';
 
 Session.setDefault("showProfileDropdown", false);
 
