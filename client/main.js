@@ -23,10 +23,13 @@ Meteor.call('alternate',
 
 });
 
-Template.body.helpers({
+Template.home.helpers({
   signingUp: function() {
     console.log(AccountsTemplates.getState());
     return AccountsTemplates.getState() == "signUp";
+  },
+  loggedIn: function() {
+    return Meteor.user() != null ? true : false;
   },
 });
 
