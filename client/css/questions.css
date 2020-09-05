@@ -13,6 +13,14 @@
   margin-bottom: 2%;
   width: 100%;
 }
+
+.ask-a-question-button {
+  margin-top: 1%;
+  margin-bottom: 2em;
+  background: transparent;
+  font-weight: 600;
+}
+
 .post-preview {
   margin-top: 1%;
   margin-bottom: 4%;

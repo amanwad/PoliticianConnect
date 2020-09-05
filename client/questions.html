@@ -7,11 +7,14 @@
                     <div style="margin-left: 3%;">
                         <h1 class="display-4">Your Questions</h1>
                         <ul>
-                        <li class="lead" style="margin-top: 1em; list-style-type:circle;">The number bolded on the right of each post is the
-                            number of upvotes for that question</li>
-                        <li class="lead" style=" display: list-item">Click "Show Description" to see the description of the question</li>
-                        <li class="lead" style = "display: list-item" >Click on the question title to reply to the question</li>
-                    </ul>
+                            <li class="lead" style="margin-top: 1em; list-style-type:circle;">The number bolded on the
+                                right of each post is the
+                                number of upvotes for that question</li>
+                            <li class="lead" style=" display: list-item">Click "Show Description" to see the description
+                                of the question</li>
+                            <li class="lead" style="display: list-item">Click on the question title to reply to the
+                                question</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -46,6 +49,18 @@
                 </div>
             </div>
             <!--End of Heading-->
+            <button type="button" class="btn btn-primary btn-lg btn-block ask-a-question-button" data-toggle="collapse"
+                href="#ask-a-question-form" role="button" aria-expanded="false" aria-controls="collapseExample">Ask a
+                question</button>
+
+            <!--PUT YOUR POST FORM CODER HERE-->
+            <div class="collapse" id="ask-a-question-form">
+                <p class="post-meta">Most republicans don't believe in climate change. Yet, 98% of scientists say
+                    climate
+                    change
+                    is real. So what is your stance?</p>
+            </div>
+
             <div class="button-grouper">
                 {{> polticianButton}}
                 {{> filterButton}}
