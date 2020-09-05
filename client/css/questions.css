@@ -21,6 +21,20 @@
   font-weight: 600;
 }
 
+#ask-a-question-form{
+  width: 100%;
+}
+
+.question-form{
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.question-form-submit{
+  border: 1px solid #343a40;
+  margin-bottom: 2em;
+}
+
 .post-preview {
   margin-top: 1%;
   margin-bottom: 4%;

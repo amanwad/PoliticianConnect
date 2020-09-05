@@ -39,6 +39,7 @@ Template.profileDropdown.events({
   },
   'click .sign-out': function (event) {
     console.log(Meteor.user());
+    Session.set("showProfileDropdown", false);
     AccountsTemplates.logout();
   },
 });
