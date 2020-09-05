@@ -8,8 +8,7 @@ Meteor.startup(() => {
 
 Accounts.onCreateUser((options, user) => {
   return Object.assign(user, options);
-})
-
+});
 
 Meteor.methods({
   loadClient() {

@@ -8,6 +8,8 @@ import './main.html';
 import './constants.html';
 import './questions.html';
 
+import "./questions.js"
+
 Session.setDefault("showProfileDropdown", false);
 
 //Show constituent signup by default
@@ -81,6 +83,7 @@ AccountsTemplates.configure({
     } else {
       info.profile.role = "constituent";
     }
+    
   }
 })
 
